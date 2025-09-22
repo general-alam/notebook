@@ -1,6 +1,5 @@
 # Notes App  
-Full-stack notes application (Django backend + React frontend).  
-Currently following a tutorial project to learn both layers and how they connect.
+Full-stack notes application (Django backend + React frontend), learning from a tutorial project.
 
 ## Tech
 - Backend: Django (Python)
