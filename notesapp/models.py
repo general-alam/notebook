@@ -11,8 +11,11 @@ class Note(models.Model):
     body = models.TextField()
     slug = models.SlugField(unique = True)
     category = models.CharField(max_length = 15, choices=CATEGORY, default="PERSONAL")
-    created = models.DatesTimeField(auto_now_add = True)
+    created = models.DateTimeField(auto_now_add = True)
     updated = models.DateTimeField(auto_now = True)
+
+    def __str__(self):
+        return self.title
 
     def save(self, *args, **kwargs):
         """
