@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Note
 
-# Register your models here.
+
+#if we don't do this we won't see this in the admin panel
+admin.site.register(Note)
+
