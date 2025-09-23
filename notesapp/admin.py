@@ -4,4 +4,3 @@ from .models import Note
 
 #if we don't do this we won't see this in the admin panel
 admin.site.register(Note)
-
