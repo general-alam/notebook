@@ -7,7 +7,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 
 
-@api_view('GET', 'POST')
+@api_view(['GET', 'POST'])
 def notes(request):
     '''
     This function will be responsible for getting all our notes in our database
