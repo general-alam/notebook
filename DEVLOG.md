@@ -35,3 +35,6 @@
   - Sucessfully deleted the test note and re-ran server to check. 
 
 ## Block 3
+- Added 10 test notes to server, in various categories.
+- Created `NoteAdmin` class with categories `title`, `category`, `created`, `updated`.
+-
