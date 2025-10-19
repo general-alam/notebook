@@ -35,6 +35,16 @@
   - Sucessfully deleted the test note and re-ran server to check. 
 
 ## Block 3
-- Added 10 test notes to server, in various categories.
-- Created `NoteAdmin` class with categories `title`, `category`, `created`, `updated`.
--
+- Added 3 test notes through admin, one in each category.
+- Created `NoteAdmin` class with categories `title`, `category`, `created`, `updated` in `notesapp/admin.py`
+- Checked `http://127.0.0.1:8000/notes/` for the existing notes.
+- Added `Postman VSCode Extension`.
+- Created `note_detail` function in `notesapp/views.py` to handle GET, PUT and DELETE requests regarding note details and error responses. 
+- Added to urls.py - path("notes/<slug:slug>/", views.note_detail, name="note_detail"),
+- Used Postman Extension to POST a new note.
+
+## Block 4 - REACT SIDE (FRONTEND)
+
+
+
+
