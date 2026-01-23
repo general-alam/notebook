@@ -43,8 +43,53 @@
 - Added to urls.py - path("notes/<slug:slug>/", views.note_detail, name="note_detail"),
 - Used Postman Extension to POST a new note.
 
-## Block 4 - REACT SIDE (FRONTEND)
 
+## Block 4: Starting React Side
+- Downloaded and installed Node.js (Windows installer MSI) from https://nodejs.org/en/download
+  - Installed in folder: `C:\Users\user\Documents\react_25`
+- Attempted to create React app using Vite:
+  - `npm create vite@latest react-note-app`
+  - Selected options: React framework, JavaScript variant, No to rolldown-vite experimental
+  - ERROR: Received error 4084 during setup
+    - Troubleshooting steps attempted:
+      - Opened PowerShell as admin and ran `set-executionpolicy remotesigned`
+      - Uninstalled global create-react-app: `npm uninstall --global create-react-app`
+      - Created React app using create-react-app instead: `npx create-react-app react-note-app`
+- Opened project in VS Code: `code .`
+- Set up development environment:
+  - Opened new terminal in VS Code (Command Prompt)
+  - Navigated to `react-note-app` directory
+  - Started dev server: `npm run dev`
+  - Verified server running at localhost (e.g., http://localhost:5174/)
+
+## Block 5
+- Cleaned up default files:
+  - Deleted `App.css` file
+  - Cleared all contents of `App.jsx`
+- Created basic App component:
+  - Used VS Code snippet `rafce` (React Arrow Function Component Export) in `App.jsx`
+  - Added test "Hello World" display to verify setup
+- Set up project structure:
+  - Created `components` folder under `src` directory
+  - Created `NavBar.jsx` file in components folder
+  - Used `rafce` snippet to generate component template in `NavBar.jsx`
+- Added styling:
+  - Updated `index.css` with custom styles (Ubuntu font, card styles, etc.)
+  - Added styling to `NavBar.jsx` component
+- Installed dependencies:
+  - Installed react-icons: `npm install react-icons`
+  - Added `FaSquarePlus` icon import from `react-icons/fa6` in `NavBar.jsx`
+  - Installed react-router-dom: `npm install react-router-dom`
+  - Added `Link` and routing hooks (`useNavigate`, `useLocation`) imports from `react-router-dom` in `NavBar.jsx`
+- Created `NavBar` component with navigation structure:
+  - Added "Notey" brand/logo link
+  - Added search bar with input and search button
+  - Added "Add Notes" button with `FaSquarePlus` icon
+  - Included navigation routing functionality
+- Updated `App.jsx` to render `NavBar` component
+
+## Block 6: 
+- 
 
 
 
