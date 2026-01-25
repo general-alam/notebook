@@ -1,23 +1,14 @@
 import React from 'react'
-import { Link, useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom"; 
 import { FaSquarePlus } from "react-icons/fa6";
+import { Link } from "react-router-dom"
 
-const NavBar = () => {
-    const navigate = useNavigate();
-    const location = useLocation();
-
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
+const NavBar = ({searchText, handelSearchText}) => {
   return (
     <nav className="navbar bg-body-tertiary py-50" style={{ padding: "20px" }}>
       <div className="container d-flex justify-content-around">
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="/">
           <h4 style={{ fontWeight: "bold" }}>Notey</h4>
-        </Link>
+        </a>
         <div className="d-flex">
           <div
             className="input-group input-group-sm"
@@ -25,9 +16,9 @@ const NavBar = () => {
           >
             <input
               className="form-control"
-              type="search"
               placeholder="Search"
-              aria-label="Search"
+              value={searchText}
+              onChange={(e) => handelSearchText(e.target.value)}
             />
             <button className="btn btn-outline-success" type="submit">
               Search
@@ -35,20 +26,18 @@ const NavBar = () => {
           </div>
         </div>
 
-        <Link to="/add-notes"  style={{ textDecoration: "none" }}>
-          <button
+        <a href="/add-note"  style={{ textDecoration: "none" }}>
+        <button
             className="btn btn-outline-primary btn-md"
             type="button"
            
           >
-            <FaSquarePlus /> Add Notes
+            <FaSquarePlus className="me-2 fs-6" /> Add Notes
           </button>
-        </Link>
+        </a>
       </div>
     </nav>
+  )
+}
 
-
-  );
-};
-
-export default NavBar;
+export default NavBar
