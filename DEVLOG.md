@@ -17,7 +17,7 @@
 - Added `notesapp` to `INSTALLED_APPS` in `settings.py`
 - Created initial `Note` model in `models.py` with fields (`title`, `body`, `slug`, `category`, `created`, `updated`)
 - Created  `save` function to create a unique slug for urls on the first save in `models.py`.
-- BUG: Had not realised I'd forgotten relevant imports (`slugify, get_random_string` from `django.utils`) in `models.py` until later running code. 
+- <ins>ISSUE</ins>: I had not realised I'd forgotten relevant imports (`slugify, get_random_string` from `django.utils`) in `models.py` until later running code. 
 - Ran the initial migrations 
   -> This sets-up Django's default database, while running these commands again commits any changes in `models.py` to keep things in sync
   - `python manage.py makemigrations`
@@ -29,10 +29,10 @@
   - `python manage.py runserver`
   - at http://127.0.0.1:8000/admin/
   - `Notesapp` appeared as a Model, with Notes, Add, Change all present. 
-  - Sucessfully created a test note with all fields. 
-  - Sucessfully updated the test note. 
+  - Successfully created a test note with all fields. 
+  - Successfully updated the test note. 
   - Note kept after re-running server.
-  - Sucessfully deleted the test note and re-ran server to check. 
+  - Successfully deleted the test note and re-ran server to check. 
 
 ## Block 3
 - Added 3 test notes through admin, one in each category.
@@ -50,7 +50,7 @@
 - Attempted to create React app using Vite:
   - `npm create vite@latest react-note-app`
   - Selected options: React framework, JavaScript variant, No to rolldown-vite experimental
-  - ERROR: Received error 4084 during setup
+  - <ins>ISSUE</ins>: Received error 4084 during setup
     - Troubleshooting steps attempted:
       - Opened PowerShell as admin and ran `set-executionpolicy remotesigned`
       - Uninstalled global create-react-app: `npm uninstall --global create-react-app`
@@ -62,7 +62,7 @@
   - Started dev server: `npm run dev`
   - Verified server running at localhost (e.g., http://localhost:5174/)
 
-## Block 5
+## Block 5: React Side 1
 - Cleaned up default files:
   - Deleted `App.css` file
   - Cleared all contents of `App.jsx`
@@ -88,8 +88,16 @@
   - Included navigation routing functionality
 - Updated `App.jsx` to render `NavBar` component
 
-## Block 6: 
-- 
+## Block 6: React Sid(nav bar)
+- It's been a while!
+- Set up the development environment again. 
+  - navigate to react-note-app in terminal and run `npm run dev`
+  - check http://localhost:5174/
+  - <ins>ISSUE</ins>: Blank page
+  - <ins>SOLVED</ins>: Press F12, check `Console`, missing import to `NavBar.jsx` in `App.jsx`. 
+- Installing `bootstrap` in the terminal (`npm install boostrap`)
+- Go to `main.jsx` and add import `import 'bootstrap/dist/css/bootstrap.css'`
+- Filter
 
 
 
