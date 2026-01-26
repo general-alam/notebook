@@ -62,7 +62,7 @@
   - Started dev server: `npm run dev`
   - Verified server running at localhost (e.g., http://localhost:5174/)
 
-## Block 5: React Side 1
+## Block 5: React Side (NavBar)
 - Cleaned up default files:
   - Deleted `App.css` file
   - Cleared all contents of `App.jsx`
@@ -88,16 +88,24 @@
   - Included navigation routing functionality
 - Updated `App.jsx` to render `NavBar` component
 
-## Block 6: React Sid(nav bar)
-- It's been a while!
-- Set up the development environment again. 
+## Block 6: React Side (Filter)
+- To set up the development environment again. 
   - navigate to react-note-app in terminal and run `npm run dev`
   - check http://localhost:5174/
   - <ins>ISSUE</ins>: Blank page
   - <ins>SOLVED</ins>: Press F12, check `Console`, missing import to `NavBar.jsx` in `App.jsx`. 
-- Installing `bootstrap` in the terminal (`npm install boostrap`)
-- Go to `main.jsx` and add import `import 'bootstrap/dist/css/bootstrap.css'`
-- Filter
+- Also, installing `bootstrap` 
+  - Installation in the terminal (`npm install boostrap`)
+  - Going to `main.jsx` and adding import `import 'bootstrap/dist/css/bootstrap.css'`
+- Introducing the new component `Filter` by creating new file `src/components/Filter.jsx`
+    - `width: "600px"` -  Width of the new filter bar
+    - `margin: "20px auto"` - Margins from the top/bottom of the filter bar
+    - `style={{ height: "50px" }}` - height of the filter bar
+    -  [the `<select> <option>` structure](https://react.dev/reference/react-dom/components/select) for the filtering options `""` (ALL), `WORK`, `PERSONAL`, `IMPORTANT`.
+- Updating `App.jsx` with our new component:
+  - Putting `<Filter />` alongside (well, under) the existing `<NavBar />` 
+  - Adding `import Filter from './components/`
 
+## Block 7: React Side (NoteCard)
 
 
