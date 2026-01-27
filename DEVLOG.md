@@ -94,9 +94,10 @@
   - check http://localhost:5174/
   - <ins>ISSUE</ins>: Blank page
   - <ins>SOLVED</ins>: Press F12, check `Console`, missing import to `NavBar.jsx` in `App.jsx`. 
-- Also, installing `bootstrap` 
+- Also, actually installing `bootstrap` 
   - Installation in the terminal (`npm install boostrap`)
   - Going to `main.jsx` and adding import `import 'bootstrap/dist/css/bootstrap.css'`
+  - YAY THINGS LOOK BETTER
 - Introducing the new component `Filter` by creating new file `src/components/Filter.jsx`
     - `width: "600px"` -  Width of the new filter bar
     - `margin: "20px auto"` - Margins from the top/bottom of the filter bar
@@ -107,5 +108,11 @@
   - Adding `import Filter from './components/`
 
 ## Block 7: React Side (NoteCard)
-
+- Introducing the new component `NotesCardContainer` by creating new file `src/components/NotesCardContainer.jsx`.
+  - Updating `App.jsx` with our new component `<NotesCardContainer />` and the imports `import NotesCardContainer from './components/NotesCardContainer'`
+- Introducing the new component `NotesCard` by creating new file `src/components/NotesCard.jsx`
+  - Importing icons `MdMarkunread` and `FaNoteSticky` from the [site](https://react-icons.github.io/react-icons/) by adding their linked imports (found in their description).
+  - Goal: Get the visuals set up, such that a dummy note can display properly (dummy text for the heading, body text, category).
+  - Add `<NoteCard />` multiple times to `NotesCardContainer.jsx` to display multiple of the same dummy note (checked Console/F12 when things didn't display) correctly. 
+![An image of the current stage we're at, where dummy notes display](images/NoteCardStageDisplay.jpg)
 

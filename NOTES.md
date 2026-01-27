@@ -1,3 +1,14 @@
+This section serves as a reference point of concepts learned or solidified through this project.
+
+
+# Table of Contents
+1. [Models in Django](#Models)
+2. [Migrations in Django](#Migrations)
+3. [DOM, Components and Advantages of React](#DOM-&-Components-(React))
+4. [JSX in React](#JSX)
+5. [Github](Github)
+
+
 ## Models
 - SlugField: generates user-friendly part of URL instead of original ID (eg. '1' -> 'contact-us')
 
@@ -15,7 +26,7 @@
     2. Apply them to your database to make sure they work as expected: `python manage.py migrate`
 - [Reversing migrations](https://docs.djangoproject.com/en/5.2/topics/migrations/#reversing-migrations)
     
-## React Basics
+## DOM & Components (React) <a name="DOM-&-Components-(React)" />
 <b>DOM (Document Object Model)</b>: "represents the web page as a tree structure. Any piece of HTML that we write is added as a node, to this tree." -- [Source: FreeCodeCamp](https://www.freecodecamp.org/news/reactjs-basics-dom-components-declarative-views/).
 Here is an example of a DOM tree:
 ![dom tree](images/DOMTREE.jpg)
@@ -45,7 +56,23 @@ Here is an example of a DOM tree:
     - self-closing tags: `<img>` must become `<img />`
     - wrapping tags: `<li>oranges</li>`
  3. camelCase most of the things! 
-    - JSX doesn't do well with key words (eg. Class) or dashes. This is another limitation as Javascript objects.
+    - JSX doesn't do well with key words (eg. Class) or dashes. This is another limitation as JavaScript objects.
+
+
+## Github
+
+Clarifying commands, concepts in github, such as:
+- `git add` 
+- `git commit -m`
+- `git push`
+- `git migrate`
+- `git pull`
+- `git fork`
+- How to initialise a repository: 
+    - Create an empty repository in Github
+    - `git init` in your terminal at the required location
+    
+
 
 
 
